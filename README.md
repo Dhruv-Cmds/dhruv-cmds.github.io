@@ -4,7 +4,7 @@ Personal developer portfolio website.
 
 ## Live Website
 
-https://dhruv-cmds.github.io/Portfolio/
+[https://dhruv-cmds.github.io/Portfolio/](https://dhruv-cmds.github.io)
 
 ## About
 
