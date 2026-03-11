@@ -1,0 +1,298 @@
+<!-- 
+Header → intro
+Nav → navigation
+Main → main content
+Footer → ending info 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dhruv Patel Backend Developer Portfolio">
+    <meta name="author" content="Dhruv Patel">
+
+    <title>Dhruv Patel | Backend Developer Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+<!-- Header is the top intro area -->
+<header>
+    <!-- h1,h2,h3,h4,h5,h6 are headings for a web page -->
+    <h1>Dhruv Patel</h1>
+
+    <!-- p is used for paragraph text -->
+      <p>Backend & Systems Developer</p> 
+      <p>Python • Java • System Design</p>
+
+      <p class="tagline">Building structured software systems with Python and Java</p>
+
+      <a class="btn" href="https://github.com/Dhruv-Cmds" target="_blank">GitHub Profile</a>
+
+</header>
+
+<!-- Navigation menu -->
+<nav>
+    <!-- ul = unordered list -->
+    <ul>
+        <!-- li = list item --> 
+        <!-- we can list menu items here --> 
+        <li><a href="#about">About</a></li>
+            <!-- Example nested list -->
+            <!--
+            <ul>
+                <li>I'm Dhruv</li>
+            </ul>
+            -->
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- main tells browsers: This is the primary content of the page -->
+<main>
+    <!-- 
+    Section contains content blocks 
+    id gives a section a unique name and helps CSS and JS target it
+    -->
+    <!-- Section 1 -->
+    <section id = "about">
+
+        <h2>About Me</h2>
+    
+        <p>
+            I am a developer focused on building structured software systems using
+            Python and Java. My projects simulate real-world environments such as
+            banking systems, operating system behavior, and management software.    
+            I enjoy designing programs with strong logical structure, defensive
+            programming practices, and clean object-oriented architecture.  
+            Most of my work focuses on command-line applications that emphasize
+            real-world logic, authentication systems, file persistence, and
+            modular program design.
+        </p>
+    
+        <p>I am learning web development and building projects.</p>
+
+    </section>
+
+    <!-- Section 2 -->
+    <section id = "skills">
+
+        <h2>Skills</h2>
+
+        <ul class="badges">
+            <li>Python</li>
+            <li>Java</li>
+            <li>Object Oriented Programming</li>
+            <li>File Handling</li>
+            <li>System Simulation</li>
+        </ul>
+        
+    </section>
+
+    <!-- Section 3 -->
+    <section id="tech">
+
+        <h2>Tech Stack</h2>
+
+        <ul class="badges">
+            <li><strong>Languages:</strong> Python, Java</li>
+            <li><strong>Backend:</strong> OOP, File Systems, CLI Applications</li>
+            <li><strong>Web:</strong> HTML, CSS</li>
+            <li><strong>Data Storage:</strong> JSON, Text Files</li>
+            <li><strong>Concepts:</strong> System Design, Authentication Logic</li>
+
+        </ul>
+
+    </section>
+
+    <!-- Section 4 -->
+    <section id="tools">
+
+        <h2>Tools</h2>
+
+        <ul class="badges">
+            <li>VS Code</li>
+            <li>Intellij</li>
+            <li>Terminal</li>
+            <li>Git</li>
+            <li>GitHub</li>
+        </ul>
+
+    </section>
+
+    <!-- Section 5 -->
+    <section id = "projects">
+
+        <h2>Projects:</h2>
+    
+        <!-- Project 1 -->
+        <!-- Article separates projects into independent content blocks -->
+        <article class="project-card">
+            
+            <h3>Python OS Simulator</h3>
+
+            <!-- details that use to hide extra info to make it clean and structured -->
+            <details>
+
+                <!-- summary adds a clickable label that expands the details -->
+                <summary>Project details</summary>
+
+                <p>
+                    Built in <time datetime="2026">2026</time>
+                </p>
+
+                <p>
+                A terminal-based operating system simulator that models core OS
+                concepts including authentication, file management, process handling,
+                Linux shell command style interaction and memory simulation using modular Python architecture. 
+
+                <a href="https://github.com/Dhruv-Cmds/Python-os-simulator" target="_blank">View Project</a> 
+
+                </p>
+
+            </details>
+
+        </article>
+        
+        <!-- Project 2 -->
+        <article class="project-card">
+
+            <h3>Advanced ATM System</h3>
+
+            <details>
+
+                <summary>Project details</summary>
+
+                <p>
+                    Built in <time datetime="2026">2026</time>
+                </p>
+
+                <p>
+                A secure ATM simulation implementing authentication, transaction
+                handling, balance validation, and persistent data storage using
+                JSON/file systems. Designed with defensive programming to prevent
+                invalid inputs and crashes.
+                
+                <a href="https://github.com/Dhruv-Cmds/An-Advance-Atm" target="_blank">View Project</a> 
+
+                </p>
+
+            </details>
+      
+        </article>
+    
+        <!-- Project 3 -->
+         <article class="project-card">
+
+            <h3>Library Management System</h3>
+
+            <details>
+
+                <summary>Project details</summary>
+
+                <p>
+                    Built in <time datetime="2026">2026</time>
+                </p>
+
+                <p>
+                A console-based system built using Java and Python that manages
+                book inventory, user records, borrowing and return logic using
+                object-oriented design and structured program architecture.
+
+                <a href="https://github.com/Dhruv-Cmds/Library-Management" target="_blank">View Project</a>
+
+                </p>
+
+            </details>
+
+        </article>
+
+    </section>
+
+    <!-- Section NEW -->
+
+    <section id="learning">
+
+        <h2>Currently Building</h2>
+
+        <ul class="badges">
+            <li>Portfolio Website</li>
+            <li>Python System Tools</li>
+            <li>Backend Logic Projects</li>
+        </ul>
+
+    </section>
+
+    <!-- Section 6 -->
+
+    <section id = "links">
+
+        <h2>Links</h2>
+    
+        <!-- div is a block element so the next element appears on a new line -->
+        <div>           
+            <!-- target opens link in a new tab instead of the same page -->
+            <p>GitHub:
+                 <a href="https://github.com/Dhruv-Cmds" target="_blank">GitHub</a>
+            </p>
+        </div>
+    
+        <div>
+            <p>LinkedIn:
+                <a href="https://www.linkedin.com/in/patel-dhruv-a77a313b4/" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+
+    </section>
+   
+    
+    <!-- Section 7 -->
+
+    <section id="github">
+
+        <h2>GitHub Stats</h2>
+
+        <img src="https://github-readme-stats.vercel.app/api?username=Dhruv-Cmds&show_icons=true&theme=dark">
+        <br>
+        <br>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dhruv-Cmds&layout=compact&theme=dark">
+
+    </section>
+
+
+    <!-- Section 8 -->
+
+    <section id = "contact">
+
+        <h2>Contact</h2>
+
+        <address>
+            
+            <p>
+                Email: <a href="mailto:pd1900565@gmail.com">pd1900565@gmail.com</a>  
+            </p>
+
+        </address>
+
+    </section>
+
+</main>
+
+<!-- Footer is used for bottom information -->
+<footer>
+
+    <p>© <time datetime="2026">2026</time> Dhruv Patel</p>
+
+</footer>
+   
+</body>
+
+</html>
