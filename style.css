@@ -234,3 +234,93 @@ padding:20px;
 }
 
 }
+
+/* ========================= */
+/* PROJECT PAGES STYLE */
+/* ========================= */
+
+/* header section */
+header{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+text-align:center;
+}
+
+/* section spacing */
+main section{
+background:#161b22;
+border:1px solid #222;
+border-radius:10px;
+padding:25px;
+margin-bottom:25px;
+}
+
+/* headings */
+h1{
+margin-bottom:15px;
+color:#facc15;
+}
+
+h2{
+margin-bottom:12px;
+}
+
+/* lists */
+section ul{
+margin-left:20px;
+}
+
+section li{
+margin-bottom:6px;
+}
+
+/* command styling */
+code{
+background:#0f1117;
+padding:3px 6px;
+border-radius:4px;
+color:#facc15;
+}
+
+/* terminal block */
+pre{
+background:#0b0d12;
+border:1px solid #2a2f3a;
+padding:20px;
+border-radius:8px;
+overflow-x:auto;
+margin-top:10px;
+}
+
+pre code{
+color:#c9d1d9;
+}
+
+/* github button */
+#link a{
+display:inline-block;
+margin-top:10px;
+padding:10px 16px;
+background:#facc15;
+color:#0f1117;
+border-radius:6px;
+font-weight:600;
+text-decoration:none;
+}
+
+#link a:hover{
+opacity:0.9;
+}
+
+/* back button if you add it later */
+.back{
+display:inline-block;
+margin-bottom:20px;
+color:#58a6ff;
+text-decoration:none;
+}
+
+.back:hover{
+text-decoration:underline;
+}

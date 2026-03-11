@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About operating System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <head>
+        
+        <h1>Python OS Simulator</h1>
+
+        <p>
+            A command-line operating system simulation that replicates basic
+            Linux-style commands such as file creation, directory navigation,
+            and file management using Python.
+
+            The system parses user commands and maps them to internal
+            functions that perform operations like creating files,
+            removing folders, check current process, give memory to tasks and listing directories.
+            
+        </p>
+
+    </head>
+
+    <main>
+
+        <section id="feture">
+
+            <h2>Fetures</h2>
+            
+            <ul>
+     
+             <li>Command-based interface similar to Linux shell</li>
+             <li>File and folder creation</li>
+             <li>File and directory deletion</li>
+             <li>Give memory to task</li>
+             <li>Manage processes</li>
+             <li>Directory navigation</li>
+             <li>Command parsing system</li>
+             <li>Audit logs</li>
+             <li>Error handling for invalid commands</li>
+     
+            </ul>
+            
+        </section>
+
+        <section id="cmds">
+
+            <h2>Commands System</h2>
+            
+            <ul>
+
+                <li><code>ls</code> → list directory contents</li>
+                <li><code>mkdir folder</code> → create new folder</li>
+                <li><code>touch file.txt</code> → create file</li>
+                <li><code>rm file.txt</code> → delete file</li>
+                <li><code>cd folder</code> → change directory</li>
+
+            </ul>
+
+        </section>
+        
+        <section id="working">
+
+            <h2>Internal Architecture</h2>
+
+            <p>
+                The command parser identifies the command keyword
+                and calls the related function inside the system.
+            </p>
+
+            <p>For example:</p>
+            
+            <ul>
+
+                <li>mkdir → create_directory()</li>
+                <li>touch → create_file()</li>
+                <li>rm → delete_file()</li>
+                <li>cd → change_directory()</li>
+                
+            </ul>
+
+        </section>
+
+        <section id="output">
+
+            <h2>Terminal Output</h2>
+
+<pre>
+<code>
+┌───────────────────────────┐
+  Python OS Simulator
+└───────────────────────────┘
+
+> mkdir projects
+Directory created
+
+> touch main.py
+File created
+
+> ls
+projects
+main.py
+
+> rm main.py
+File deleted
+
+</code>
+</pre>
+
+        </section>
+
+         <section id="techused">
+            
+            <h2>Technologies Used</h2>
+
+            <ul>
+
+                <li>Python</li>
+                <li>Command Line Interface</li>
+                <li>File System Operations</li>
+                <li>Modular Function Design</li>
+
+            </ul>
+
+        </section>
+
+         <section id="link">
+
+            <h2> GitHub Repository</h2>
+            
+            <a href="https://github.com/Dhruv-Cmds/Python-os-simulator" target="_blank">View Source Code</a>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© <time datetime="2026">2026</time> Dhruv Patel</p>
+
+    </footer>
+
+</body>
+
+</html>
