@@ -23,6 +23,7 @@ It highlights projects focused on real-world system logic such as operating syst
 * Python OS Simulator
 * Advanced ATM System
 * Library Management System
+* Mini DataBase 
 
 ## GitHub
 
