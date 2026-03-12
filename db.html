@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Mini Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Mini Database Engine</h1>
+
+        <p>
+            A lightweight Python CLI database system that simulates basic database
+            operations such as creating tables, inserting records, updating data,
+            and deleting entries. The system stores table data using JSON files
+            and allows users to interact with the database through simple commands
+            in a command line interface.
+        </p>
+
+    </header>
+
+    <main>
+
+        <section id="feature">
+
+            <h2>What it can do</h2>
+
+            <ul>
+                <li>Create new tables</li>
+                <li>Insert records into tables</li>
+                <li>Display stored data</li>
+                <li>Update existing records</li>
+                <li>Delete records or entire tables</li>
+                <li>Store table data using JSON files</li>
+            </ul>
+
+        </section>
+
+        <section id="working">
+
+            <h2>How it works</h2>
+
+            <h4>The Mini Database Engine follows a simple modular structure.</h4>
+
+            <ol>
+
+                <li>
+                    Table Management Module
+                    Handles creating, listing, and deleting tables.
+                </li>
+
+                <li>
+                    Record Management Module
+                    Manages inserting, selecting, updating, and deleting records.
+                </li>
+
+                <li>
+                    Storage Module
+                    Stores table data inside JSON files inside the database folder.
+                </li>
+
+                <li>
+                    Command Interface
+                    Allows users to interact with the database using commands such as
+                    create_table, insert, select, update, and delete.
+                </li>
+
+            </ol>
+
+        </section>
+
+        <section id="output">
+
+            <h2>Example Terminal Output</h2>
+
+            <pre>
+<code>
+DB> create_table students
+Enter columns: name,age,city
+
+Table 'students' created successfully.
+
+DB> insert students
+Enter name: alex
+Enter age: 21
+Enter city: Houston
+
+Record inserted successfully.
+
+DB> select students
+
+ID | NAME | AGE | CITY
+1  | alex | 21  | Houston
+</code>
+</pre>
+
+        </section>
+
+        <section id="techused">
+
+            <h2>Technologies Used</h2>
+
+            <ul>
+                <li>Python</li>
+                <li>JSON file storage</li>
+                <li>Command Line Interface</li>
+                <li>Object Oriented Programming</li>
+            </ul>
+
+        </section>
+
+        <section id="link">
+
+            <h2>GitHub Repository</h2>
+
+            <a href="https://github.com/Dhruv-Cmds/MiniDataBase" target="_blank">View Source Code</a>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© <time datetime="2026">2026</time> Dhruv Patel</p>
+
+    </footer>
+
+</body>
+
+</html>
