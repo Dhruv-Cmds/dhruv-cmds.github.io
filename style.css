@@ -1,42 +1,62 @@
-/* RESET */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500&display=swap');
+
+/* =========================
+RESET
+========================= */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
-/* BODY */
+/* =========================
+BODY
+========================= */
+
 body{
-font-family:Segoe UI, Arial, sans-serif;
-background:#0f1117;
-color:#e6edf3;
+font-family:'Inter', sans-serif;
+background:#0d0d12;
+color:#d6d6de;
 line-height:1.6;
+min-height:100vh;
+display:flex;
+flex-direction:column;
 }
 
-/* HEADER */
+/* =========================
+HEADER
+========================= */
+
 header{
-background:linear-gradient(120deg,#0f1117,#1a1d25);
-padding:60px 20px;
+background:#12121a;
 text-align:center;
-border-bottom:1px solid #222;
+padding:60px 20px;
+border-bottom:1px solid #23232e;
+max-width:1200px;
+margin:0 auto;
+width:100%;
 }
 
 header h1{
+font-family:'Space Grotesk', sans-serif;
 font-size:36px;
 margin-bottom:10px;
+color:#e9e9f1;
 }
 
 header p{
-color:#9da5b4;
-font-size:15px;
+color:#9aa0ad;
+font-size:14px;
 }
 
-/* NAVIGATION */
+/* =========================
+NAVBAR
+========================= */
+
 nav{
-background:#161b22;
-border-bottom:1px solid #222;
-color:#facc15;
-transition:0.2s;
+background:#101017;
+border-bottom:1px solid #23232e;
 position:sticky;
 top:0;
 z-index:100;
@@ -45,140 +65,67 @@ z-index:100;
 nav ul{
 display:flex;
 justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+padding:14px;
 list-style:none;
-gap:35px;
-padding:15px;
 }
 
 nav a{
 text-decoration:none;
-color:#e6edf3;
+color:#a8a8b8;
 font-size:14px;
+transition:.2s;
 }
 
 nav a:hover{
-color:#facc15;
+color:#c7a6ff;
 }
 
-/* MAIN CONTAINER */
+/* =========================
+MAIN LAYOUT
+========================= */
+
 main{
 max-width:1100px;
 margin:auto;
 padding:40px 20px;
+flex:1;
 }
 
-/* SECTIONS */
+/* =========================
+SECTIONS
+========================= */
+
 section{
-background:#161b22;
-padding:30px;
-margin-bottom:25px;
+background:#15151d;
+border:1px solid #242433;
 border-radius:10px;
-border:1px solid #222;
-}
-
-section h2{
-margin-bottom:15px;
-font-size:20px;
-color:#facc15;
-}
-
-/* SKILLS */
-section ul{
-margin-left:18px;
-}
-
-section li{
-margin-bottom:5px;
-}
-
-/* PROJECT CARDS */
-article{
-background:#0f1117;
-border:1px solid #2a2f3a;
-padding:18px;
-border-radius:8px;
-margin-bottom:15px;
-transition:.3s;
-}
-
-article:hover{
-border-color:#facc15;
-transform:translateY(-3px);
-}
-
-/* PROJECT TITLE */
-article h3{
-margin-bottom:8px;
-}
-
-/* DETAILS */
-summary{
-cursor:pointer;
-color:#9da5b4;
-margin-bottom:8px;
-}
-
-details p{
-margin-top:8px;
-color:#c9d1d9;
-}
-
-/* LINKS */
-a{
-color:#58a6ff;
-text-decoration:none;
-}
-
-a:hover{
-text-decoration:underline;
-}
-
-/* CONTACT */
-address{
-font-style:normal;
-}
-
-/* FOOTER */
-footer{
-background:#161b22;
-border-top:1px solid #222;
-text-align:center;
-padding:20px;
-font-size:14px;
-color:#9da5b4;
-}
-
-/* SMOOTH SCROLL */
-html{
-scroll-behavior:smooth;
-}
-
-/* HEADER TAGLINE */
-.tagline{
-margin-top:10px;
-font-size:14px;
-color:#9da5b4;
-}
-
-/* GITHUB BUTTON */
-.btn{
-display:inline-block;
-margin-top:15px;
-padding:10px 18px;
-background:#facc15;
-color:#0f1117;
-border-radius:6px;
-font-weight:600;
-text-decoration:none;
+padding:25px;
+margin-bottom:25px;
 transition:.25s;
+width:100%;
 }
 
-.btn:hover{
-opacity:0.9;
+section:hover{
+border-color:#7b5cff;
 transform:translateY(-2px);
 }
 
-/* SKILL / TECH BADGES */
+/* =========================
+HEADINGS
+========================= */
+
+section h2{
+margin-bottom:14px;
+font-size:20px;
+color:#c7a6ff;
+}
+
+/* =========================
+BADGES
+========================= */
+
 .badges{
 list-style:none;
 margin-top:10px;
@@ -186,48 +133,204 @@ margin-top:10px;
 
 .badges li{
 display:inline-block;
-background:#0f1117;
-border:1px solid #2a2f3a;
+background:#0f0f16;
+border:1px solid #2a2a3a;
 padding:6px 12px;
 border-radius:20px;
 font-size:13px;
 margin:4px;
-color:#e6edf3;
+color:#d6d6de;
 }
 
-/* PROJECT CARD HOVER ENHANCEMENT */
+/* =========================
+PROJECT GRID
+========================= */
+
+#projects{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+#projects article{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+
+/* menu (ATM OS Library MiniDB) */
+#projects nav{
+display:flex;
+justify-content:center;
+}
+
+/* project cards grid */
+#projects .projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+
+/* =========================
+PROJECT CARDS
+========================= */
+
 .project-card{
-transition:.3s;
+background:#0f0f16;
+border:1px solid #2a2a3a;
+border-radius:10px;
+padding:20px;
+transition:.25s;
+width:100%;
 }
 
 .project-card:hover{
-box-shadow:0 8px 20px rgba(0,0,0,0.4);
+transform:translateY(-3px);
+border-color:#7b5cff;
 }
 
-/* DETAILS OPEN STYLE */
-details[open]{
-margin-top:8px;
-}
+/* =========================
+BUTTONS
+========================= */
 
-/* GITHUB STATS IMAGES */
-#github img{
-max-width:100%;
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 18px;
+background:#7b5cff;
+color:white;
 border-radius:6px;
+font-weight:500;
+text-decoration:none;
+transition:.25s;
+}
+
+.btn:hover{
+background:#6b4ef0;
+}
+
+/* =========================
+LINKS
+========================= */
+
+a{
+color:#9f8cff;
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+/* =========================
+TABLE
+========================= */
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th, td{
+padding:10px;
+border-bottom:1px solid #252536;
+font-size:14px;
+}
+
+th{
+text-align:left;
+color:#c7a6ff;
+}
+
+/* =========================
+CODE BLOCKS
+========================= */
+
+code{
+background:#0f0f16;
+padding:3px 6px;
+border-radius:4px;
+color:#c7a6ff;
+}
+
+pre{
+background:#0b0b12;
+border:1px solid #2a2a3a;
+padding:18px;
+border-radius:8px;
+overflow-x:auto;
 margin-top:10px;
 }
 
-/* CONTACT LINK STYLE */
-#contact a{
-font-weight:500;
+pre code{
+color:#d6d6de;
 }
 
-/* SMALL SCREEN IMPROVEMENT */
-@media(max-width:700px){
+/* =========================
+IMAGES
+========================= */
+
+img{
+max-width:100%;
+border-radius:8px;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+text-align:center;
+padding:20px;
+font-size:13px;
+color:#8a8aa0;
+border-top:1px solid #23232e;
+}
+
+/* =========================
+SMOOTH SCROLL
+========================= */
+
+html{
+scroll-behavior:smooth;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media (max-width:1000px){
+
+main{
+padding:35px 20px;
+}
+
+section{
+padding:22px;
+}
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width:700px){
 
 nav ul{
 flex-direction:column;
 align-items:center;
-gap:15px;
+gap:14px;
+}
+
+header{
+padding:40px 15px;
+}
+
+header h1{
+font-size:28px;
 }
 
 main{
@@ -238,185 +341,24 @@ section{
 padding:20px;
 }
 
-}
-
-/* ========================= */
-/* PROJECT PAGES STYLE */
-/* ========================= */
-
-/* header section */
-header{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
+.btn{
+width:100%;
 text-align:center;
+padding:12px;
 }
-
-/* section spacing */
-main section{
-background:#161b22;
-border:1px solid #222;
-border-radius:10px;
-padding:25px;
-margin-bottom:25px;
-}
-
-/* headings */
-h1{
-margin-bottom:15px;
-color:#facc15;
-}
-
-h2{
-margin-bottom:12px;
-}
-
-/* lists */
-section ul{
-margin-left:20px;
-}
-
-section li{
-margin-bottom:6px;
-}
-
-/* command styling */
-code{
-background:#0f1117;
-padding:3px 6px;
-border-radius:4px;
-color:#facc15;
-}
-
-/* terminal block */
-pre{
-background:#0b0d12;
-border:1px solid #2a2f3a;
-padding:20px;
-border-radius:8px;
-overflow-x:auto;
-margin-top:10px;
-}
-
-pre code{
-color:#c9d1d9;
-}
-
-/* github button */
-#link a{
-display:inline-block;
-margin-top:10px;
-padding:10px 16px;
-background:#facc15;
-color:#0f1117;
-border-radius:6px;
-font-weight:600;
-text-decoration:none;
-}
-
-#link a:hover{
-opacity:0.9;
-}
-
-/* back button if you add it later */
-.back{
-display:inline-block;
-margin-bottom:20px;
-color:#58a6ff;
-text-decoration:none;
-}
-
-.back:hover{
-text-decoration:underline;
-}
-
-/* ===================== */
-/* PROJECT CARDS */
-/* ===================== */
-
-.project-card{
-
-background:#0f1117;
-border:1px solid #2a2f3a;
-border-radius:10px;
-padding:20px;
-margin-bottom:20px;
-
-transition:0.25s;
 
 }
 
-/* hover animation */
+/* =========================
+LARGE SCREENS
+========================= */
 
-.project-card:hover{
+@media (min-width:1400px){
 
-transform:translateY(-4px);
-border-color:#facc15;
-box-shadow:0 8px 20px rgba(0,0,0,0.5);
-
+main{
+max-width:1200px;
+margin:0 auto;
+padding:40px 20px;
 }
 
-/* project title */
-
-.project-card h3{
-
-margin-bottom:10px;
-
 }
-
-/* project button */
-
-.project-card a{
-
-display:inline-block;
-margin-top:10px;
-
-background:#facc15;
-color:#0f1117;
-
-padding:8px 14px;
-
-border-radius:6px;
-font-weight:600;
-
-text-decoration:none;
-
-}
-
-.project-card a:hover{
-
-opacity:0.9;
-
-}
-
-#projects{
-
-display:block;
-
-}
-
-#projects article{
-
-display:grid;
-grid-template-columns:1fr;
-gap:20px;
-
-}
-
-#projects nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-padding:0;
-margin:10px 0 20px 0;
-}
-
-#projects nav a{
-text-decoration:none;
-color:#e6edf3;
-}
-
-#projects nav a:hover{
-color:#facc15;
-}
-
