@@ -362,3 +362,14 @@ padding:40px 20px;
 }
 
 }
+
+.github-stats{
+display:flex;
+justify-content:center;
+margin-top:20px;
+}
+
+.github-stats img{
+max-width:100%;
+width:700px;
+}
