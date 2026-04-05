@@ -122,9 +122,22 @@ font-size:20px;
 color:#c7a6ff;
 }
 
+section h3 {
+    text-align:center;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    color: #9aa0ad;
+    font-size: 15px;
+}
+
 /* =========================
 BADGES
 ========================= */
+
+.skills-grid :hover{
+border-color:#7b5cff;
+transform:translateY(-2px);
+}
 
 .badges{
 list-style:none;
@@ -136,12 +149,24 @@ display:inline-block;
 background:#0f0f16;
 border:1px solid #2a2a3a;
 padding:6px 12px;
-border-radius:20px;
+border-radius:7px;
 font-size:13px;
 margin:4px;
 color:#d6d6de;
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill-group {
+    background: #0f0f16;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #2a2a3a;
+}
 /* =========================
 PROJECT GRID
 ========================= */
