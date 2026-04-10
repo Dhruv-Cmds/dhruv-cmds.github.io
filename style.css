@@ -112,6 +112,21 @@ border-color:#7b5cff;
 transform:translateY(-2px);
 }
 
+.left-heading {
+    text-align: left;
+    font-size:20px;
+}
+
+.about-list {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.about-list li {
+    margin-bottom: 6px;
+    color: #cbd5e1;
+}
+
 /* =========================
 HEADINGS
 ========================= */
