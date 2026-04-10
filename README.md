@@ -1,5 +1,3 @@
-## 👨‍💻 Backend Developer | FastAPI | System Design
-
 # Dhruv Patel Portfolio
 
 Personal developer portfolio showcasing backend and system-based projects.
