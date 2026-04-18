@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Mini Database</title>
+    <title>Mini Database Engine</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,70 +16,106 @@
         <h1>Mini Database Engine</h1>
 
         <p>
-            A lightweight Python CLI database system that simulates basic database
-            operations such as creating tables, inserting records, updating data,
-            and deleting entries. The system stores table data using JSON files
-            and allows users to interact with the database through simple commands
-            in a command line interface.
+            A lightweight Python-based database system that simulates core database operations
+            such as table creation, record management, and data persistence using JSON storage.
+            Designed to demonstrate how database engines manage structured data at a fundamental level.
         </p>
+
+        <div class="badges">
+            <span>📦 Table Management</span>
+            <span>🧾 Record Operations</span>
+            <span>📂 JSON Storage</span>
+            <span>⚙️ CLI Commands</span>
+        </div>
 
     </header>
 
     <main>
 
+        <!-- FEATURES -->
         <section id="feature">
 
-            <h2>What it can do</h2>
+            <h1>Core Features</h1>
+
+            <h2>Table Management</h2>
 
             <ul>
-                <li>Create new tables</li>
-                <li>Insert records into tables</li>
-                <li>Display stored data</li>
+                <li>Create and delete tables dynamically</li>
+                <li>Define custom table structures</li>
+            </ul>
+
+            <br>
+
+            <h2>Record Operations</h2>
+
+            <ul>
+                <li>Insert new records</li>
+                <li>Retrieve stored data</li>
                 <li>Update existing records</li>
-                <li>Delete records or entire tables</li>
-                <li>Store table data using JSON files</li>
+                <li>Delete records selectively</li>
+            </ul>
+
+            <br>
+
+            <h2>Data Persistence</h2>
+
+            <ul>
+                <li>Stores data using JSON files</li>
+                <li>Maintains state between program runs</li>
+            </ul>
+
+            <br>
+            
+            <h2>Command Interface</h2>
+
+            <ul>
+                <li>CLI-based interaction</li>
+                <li>Supports commands like create, insert, select, update, delete</li>
             </ul>
 
         </section>
 
+        <!-- ARCHITECTURE -->
         <section id="working">
 
-            <h2>How it works</h2>
+            <h2>System Architecture</h2>
 
-            <h4>The Mini Database Engine follows a simple modular structure.</h4>
+            <p>
+                The engine follows a modular structure where each component handles a specific
+                responsibility, ensuring clarity and maintainability.
+            </p>
 
-            <ol>
-
-                <li>
-                    Table Management Module
-                    Handles creating, listing, and deleting tables.
-                </li>
-
-                <li>
-                    Record Management Module
-                    Manages inserting, selecting, updating, and deleting records.
-                </li>
-
-                <li>
-                    Storage Module
-                    Stores table data inside JSON files inside the database folder.
-                </li>
-
-                <li>
-                    Command Interface
-                    Allows users to interact with the database using commands such as
-                    create_table, insert, select, update, and delete.
-                </li>
-
-            </ol>
+<pre><code>
+Table Manager     → handles table creation & deletion
+Record Manager    → manages CRUD operations
+Storage Engine    → persists data in JSON files
+Command Parser    → interprets user CLI commands
+</code></pre>
 
         </section>
 
+        <!-- BUSINESS RULES -->
+        <section id="rules">
+
+            <h2>System Rules & Constraints</h2>
+
+            <ul>
+                <li>Tables must be defined before inserting records</li>
+                <li>Data structure must match defined columns</li>
+                <li>Invalid commands are safely rejected</li>
+                <li>All operations immediately reflect in storage</li>
+            </ul>
+
+        </section>
+
+        <!-- OUTPUT -->
         <section id="output">
 
             <h2>Example Terminal Output</h2>
 
-            <pre>
+            <p>Sample interaction with the database engine:</p>
+
+<pre>
 <code>
 DB> create_table students
 Enter columns: name,age,city
@@ -102,24 +138,46 @@ ID | NAME | AGE | CITY
 
         </section>
 
+        <!-- TECH STACK -->
         <section id="techused">
 
             <h2>Technologies Used</h2>
 
             <ul>
-                <li>Python</li>
-                <li>JSON file storage</li>
-                <li>Command Line Interface</li>
-                <li>Object Oriented Programming</li>
+                <li><strong>Language:</strong> Python</li>
+                <li><strong>Storage:</strong> JSON files</li>
+                <li><strong>Interface:</strong> Command Line (CLI)</li>
+                <li><strong>Design:</strong> Object-Oriented Programming</li>
             </ul>
 
         </section>
 
+        <!-- LINKS -->
         <section id="link">
 
-            <h2>GitHub Repository</h2>
+            <h2>Project Links</h2>
 
-            <a href="https://github.com/Dhruv-Cmds/MiniDataBase" target="_blank">View Source Code</a>
+            <ul>
+                <li>
+                    <a href="https://github.com/Dhruv-Cmds/MiniDataBase" target="_blank">
+                        GitHub Repository
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- WHY -->
+        <section id="why">
+
+            <h2>Why This Project?</h2>
+
+            <p>
+                This project demonstrates the core principles behind database systems,
+                including structured data storage, CRUD operations, and command parsing.
+                It highlights how real databases manage data internally using modular
+                components and persistent storage mechanisms.
+            </p>
 
         </section>
 
