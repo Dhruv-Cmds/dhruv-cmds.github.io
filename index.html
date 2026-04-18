@@ -1,10 +1,3 @@
-<!-- 
-Header → intro
-Nav → navigation
-Main → main content
-Footer → ending info 
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,86 +7,76 @@ Footer → ending info
     <meta name="description" content="Dhruv Patel Backend Developer Portfolio">
     <meta name="author" content="Dhruv Patel">
 
-    <title>Dhruv Patel | Backend Developer Portfolio</title>
+    <title>Dhruv Patel | Backend Developer</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header is the top intro area -->
+    <!-- HEADER -->
     <header>
-        <!-- h1,h2,h3,h4,h5,h6 are headings for a web page -->
+
         <h1>Dhruv Patel</h1>
 
-        <!-- p is used for paragraph text -->
-        <p>Backend Developer | FastAPI & System Design</p>
-        <p>Python • Java • System Design</p>
+        <p class="subtitle">Backend Developer | FastAPI & System Design</p>
 
-        <p class="tagline">Building real-world backend systems with Python, APIs, and database architecture.</p>
+        <p class="tagline">
+            I build backend systems that behave like real-world machines —
+            secure, scalable, and grounded in solid logic.
+        </p>
 
-        <a class="btn" href="https://github.com/Dhruv-Cmds" target="_blank">GitHub Profile</a>
+        <div class="badges">
+            <span>⚡ FastAPI</span>
+            <span>🧠 System Design</span>
+            <span>💾 Databases</span>
+            <span>🔐 Secure APIs</span>
+        </div>
+
+        <a class="btn" href="https://github.com/Dhruv-Cmds" target="_blank">
+            View GitHub
+        </a>
 
     </header>
 
-    <!-- Navigation menu -->
+    <!-- NAV -->
     <nav>
-        <!-- ul = unordered list -->
         <ul>
-            <!-- li = list item -->
-            <!-- we can list menu items here -->
-            <li><a href="index.html">Home</a></li>
             <li><a href="#about">About</a></li>
-            <!-- Example nested list -->
-            <!--
-            <ul>
-                <li>I'm Dhruv</li>
-            </ul>
-            -->
-
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#links">Links</a></li>
             <li><a href="#contact">Contact</a></li>
-
         </ul>
-
     </nav>
 
-    <!-- main tells browsers: This is the primary content of the page -->
+    <!-- MAIN -->
     <main>
-        <!-- 
-    Section contains content blocks 
-    id gives a section a unique name and helps CSS and JS target it
-    -->
-        <!-- Section 1 -->
+
+        <!-- ABOUT -->
         <section id="about">
 
             <h2>About Me</h2>
 
-            <p>I’m a backend-focused developer who builds structured and scalable systems using Python and FastAPI.</p>
+            <p>
+                I’m a backend-focused developer who designs structured systems using Python and FastAPI.
+                I enjoy building APIs, managing databases, and writing modular code that mirrors real-world logic.
+            </p>
 
-            <p>I enjoy designing APIs, managing databases, and writing clean, modular code that reflects real-world
-                logic.</p>
-
-            <br>
-
-            <h3 class="left-heading">My projects focus on:</h3>
+            <h3 class="left-heading">What I focus on:</h3>
 
             <ul class="about-list">
                 <li>Backend architecture</li>
                 <li>API development</li>
                 <li>Database design</li>
                 <li>System-level thinking</li>
-            </ul
+            </ul>
 
-            >
-            <br>
-
-            <p>I am learning web development and building projects.</p>
+            <p>I’m currently expanding into web development while continuing to build backend-heavy systems.</p>
 
         </section>
 
-        <!-- Section 2 -->
+        <!-- SKILLS -->
         <section id="skills">
 
             <h2>Technical Skills</h2>
@@ -101,52 +84,38 @@ Footer → ending info
             <div class="skills-grid">
 
                 <div class="skill-group">
-
-                    <h3>Languages:</h3>
-
+                    <h3>Languages</h3>
                     <ul class="badges">
                         <li>Python</li>
                         <li>Java</li>
                     </ul>
-
                 </div>
 
                 <div class="skill-group">
-
-                    <h3>Web:</h3>
-
+                    <h3>Web</h3>
                     <ul class="badges">
                         <li>HTML</li>
                         <li>CSS</li>
                     </ul>
-
                 </div>
 
                 <div class="skill-group">
-
-                    <h3>Databases:</h3>
-
+                    <h3>Databases</h3>
                     <ul class="badges">
                         <li>MySQL</li>
                         <li>SQL</li>
                     </ul>
-
                 </div>
 
                 <div class="skill-group">
-
-                    <h3>Frameworks:</h3>
-
+                    <h3>Frameworks</h3>
                     <ul class="badges">
                         <li>FastAPI</li>
                     </ul>
-
                 </div>
 
                 <div class="skill-group">
-
-                    <h3>Tools:</h3>
-
+                    <h3>Tools</h3>
                     <ul class="badges">
                         <li>Git</li>
                         <li>GitHub</li>
@@ -154,173 +123,95 @@ Footer → ending info
                         <li>IntelliJ</li>
                         <li>DBeaver</li>
                     </ul>
-
                 </div>
 
             </div>
 
         </section>
 
-        <!-- Section 3 -->
+        <!-- PROJECTS -->
         <section id="projects">
 
-            <nav>
+            <h2>Projects</h2>
 
-                <ul>
+            <div class="projects-grid">
 
-                    <li><a href="atm.html">ATM</a></li>
-                    <li><a href="os.html">OS</a></li>
-                    <li><a href="bankingsystem.html">Banking System</a></li>
-                    <li><a href="db.html">MiniDB</a></li>
-
-                </ul>
-
-            </nav>
-
-            <h2>Projects:</h2>
-
-            <!-- Project 1 -->
-            <!-- Article separates projects into independent content blocks -->
-
-            <article class="project-card">
-
-                <h3>FastAPI Banking System</h3>
-
-                <details>
-
-                    <summary>Project details</summary>
-
+                <article class="project-card">
+                    <h3>🏦 Banking System API</h3>
                     <p>
-                        A RESTful banking API built using FastAPI that supports
-                        account creation, deposits, withdrawals, and transaction handling
-                        with proper database integration and validation.
-
-                        <a href="bankingsystem.html" target="_blank">View Project</a>
-
+                        Production-style FastAPI backend with authentication, transaction handling,
+                        account lifecycle management, and database integration.
                     </p>
+                    <a href="bankingsystem.html" target="_blank">View Project →</a>
+                </article>
 
-                </details>
-
-            </article>
-
-
-            <article class="project-card">
-
-                <h3>Python OS Simulator</h3>
-
-                <!-- details that use to hide extra info to make it clean and structured -->
-                <details>
-
-                    <!-- summary adds a clickable label that expands the details -->
-                    <summary>Project details</summary>
-
+                <article class="project-card">
+                    <h3>💻 OS Simulator</h3>
                     <p>
-                        A terminal-based operating system simulator that models core OS
-                        concepts including authentication, file management, process handling,
-                        Linux shell command style interaction and memory simulation using modular Python architecture.
-
-                        <a href="os.html" target="_blank">View Project</a>
-
+                        CLI-based operating system simulation with command parsing,
+                        file handling, process management, and memory allocation logic.
                     </p>
+                    <a href="os.html" target="_blank">View Project →</a>
+                </article>
 
-                </details>
-
-            </article>
-
-
-            <article class="project-card">
-
-                <h3>Advanced ATM System</h3>
-
-                <details>
-
-                    <summary>Project details</summary>
-
+                <article class="project-card">
+                    <h3>🏧 ATM System</h3>
                     <p>
-                        A secure ATM simulation implementing authentication, transaction
-                        handling, balance validation, and persistent data storage using
-                        JSON/file systems. Designed with defensive programming to prevent
-                        invalid inputs and crashes.
-
-                        <a href="atm.html" target="_blank">View Project</a>
-
+                        Secure ATM simulation with PIN authentication, transaction validation,
+                        and persistent storage using file systems.
                     </p>
+                    <a href="atm.html" target="_blank">View Project →</a>
+                </article>
 
-                </details>
-
-            </article>
-
-
-            <article class="project-card">
-
-                <h3>Mini Database Engine</h3>
-
-                <details>
-
-                    <summary>Project details</summary>
-
+                <article class="project-card">
+                    <h3>🗄️ Mini Database Engine</h3>
                     <p>
-                        A lightweight command-line database engine built in Python that simulates
-                        core database operations such as table creation, record insertion,
-                        data retrieval, updates, and deletion. The system stores structured
-                        data using JSON files and provides a simple command interface for
-                        managing tables and records efficiently.
-
-                        <a href="db.html" target="_blank">View Project</a>
-
+                        Lightweight database engine supporting CRUD operations,
+                        table management, and JSON-based storage.
                     </p>
+                    <a href="db.html" target="_blank">View Project →</a>
+                </article>
 
-                </details>
-
-            </article>
+            </div>
 
         </section>
 
-        <!-- Section NEW -->
-
+        <!-- CURRENTLY BUILDING -->
         <section id="learning">
 
             <h2>Currently Building</h2>
 
             <ul class="badges">
-                <li>Web development</li>
-                <li>Python System Tools</li>
-                <li>Backend Logic Projects</li>
+                <li>Web Development</li>
+                <li>Backend Systems</li>
+                <li>Python Tools</li>
             </ul>
 
         </section>
 
-        <!-- Section 6 -->
-
+        <!-- LINKS -->
         <section id="links">
 
             <h2>Links</h2>
 
-            <!-- div is a block element so the next element appears on a new line -->
-            <div>
-                <!-- target opens link in a new tab instead of the same page -->
-                <p>GitHub:
-                    <a href="https://github.com/Dhruv-Cmds" target="_blank">GitHub</a>
-                </p>
-            </div>
+            <p>
+                GitHub:
+                <a href="https://github.com/Dhruv-Cmds" target="_blank">GitHub Profile</a>
+            </p>
 
-            <div>
-                <p>LinkedIn:
-                    <a href="https://www.linkedin.com/in/patel-dhruv-a77a313b4/" target="_blank">LinkedIn</a>
-                </p>
-            </div>
+            <p>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/patel-dhruv-a77a313b4/" target="_blank">LinkedIn Profile</a>
+            </p>
 
         </section>
 
-
-        <!-- Section 7 -->
-
+        <!-- GITHUB STATS -->
         <section id="github">
 
             <h2>GitHub Stats</h2>
 
             <p align="center">
-
                 <img height="180em"
                     src="https://github-readme-stats-sigma-five.vercel.app/api?username=Dhruv-Cmds&show_icons=true&theme=dark">
 
@@ -330,25 +221,23 @@ Footer → ending info
 
         </section>
 
-        <!-- Section 8 -->
-
+        <!-- CONTACT -->
         <section id="contact">
 
             <h2>Contact</h2>
 
             <address>
-
                 <p>
-                    Email: <a href="mailto:pd1900565@gmail.com">pd1900565@gmail.com</a>
+                    Email:
+                    <a href="mailto:pd1900565@gmail.com">pd1900565@gmail.com</a>
                 </p>
-
             </address>
 
         </section>
 
     </main>
 
-    <!-- Footer is used for bottom information -->
+    <!-- FOOTER -->
     <footer>
 
         <p>© <time datetime="2026">2026</time> Dhruv Patel</p>
