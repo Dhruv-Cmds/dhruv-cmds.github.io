@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,22 @@
 </head>
 
 <body>
-    
+
     <header>
-        
+
         <h1>🏦 Advanced Banking System</h1>
 
         <p>
-            A banking system built using Python and MySQL that manages user accounts, transactions, and balance operations. It supports deposits, withdrawals, fund transfers, and balance tracking with proper validation, structured program logic, and persistent data storage.
+            A production-ready fintech backend built with FastAPI for secure, scalable, and rule-driven financial
+            operations.
         </p>
+
+        <div class="badges">
+            <span>⚡ FastAPI Powered</span>
+            <span>🔐 JWT Secured</span>
+            <span>💸 Transaction Engine</span>
+            <span>🧾 Ledger Tracking</span>
+        </div>
 
     </header>
 
@@ -23,49 +32,114 @@
 
         <section id="feature">
 
-            <h2>Features</h2>
-            
-           <ul>
-                <li>Create and manage user bank accounts</li>
-                <li>Deposit and withdraw money via API endpoints</li>
-                <li>Transfer funds between accounts</li>
-                <li>Balance tracking with validation</li>
-                <li>RESTful API endpoints using FastAPI</li>
-                <li>Interactive API documentation via Swagger UI (/docs)</li>
-                <li>Data validation using Pydantic schemas</li>
-                <li>Database operations using SQLAlchemy ORM</li>
+            <h2>Account Management</h2>
+
+            <ul>
+                <li>Create and manage multiple user accounts</li>
+                <li>Unique account number enforcement</li>
+                <li>Account lifecycle: ACTIVE / CLOSED</li>
             </ul>
-            
+
+            <br>
+
+            <h2>Transactions Engine</h2>
+
+            <ul>
+                <li>Deposit, withdraw, and transfer funds</li>
+                <li>Prevents overdraft (no negative balance)</li>
+                <li>Prevents self-transfers</li>
+                <li>Atomic database transactions</li>
+            </ul>
+
+            <br>
+
+            <h2>Authentication & Security</h2>
+
+            <ul>
+                <li>JWT-based authentication</li>
+                <li>Password hashing using bcrypt</li>
+                <li>Protected API routes</li>
+            </ul>
+
+            <br>
+
+            <h2>Ledger System</h2>
+
+            <ul>
+                <li>Every transaction is recorded</li>
+                <li>Supports audit and tracking</li>
+                <li>Foundation for analytics & fraud detection</li>
+            </ul>
+
         </section>
 
         <section id="cmds">
 
             <h2>System Operations</h2>
-            
-            <ul>
-                <li><strong>Create Account</strong> → register new user account</li>
-                <li><strong>Deposit</strong> → add money to account</li>
-                <li><strong>Withdraw</strong> → remove money with validation</li>
-                <li><strong>Transfer</strong> → send money between accounts</li>
-                <li><strong>Check Balance</strong> → view current balance</li>
-            </ul>
+
+            <table>
+                <tr>
+                    <th>Operation</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Create Account</td>
+                    <td>Registers a new user account</td>
+                </tr>
+                <tr>
+                    <td>Deposit</td>
+                    <td>Adds money with validation</td>
+                </tr>
+                <tr>
+                    <td>Withdraw</td>
+                    <td>Removes money with balance checks</td>
+                </tr>
+                <tr>
+                    <td>Transfer</td>
+                    <td>Moves funds securely between accounts</td>
+                </tr>
+                <tr>
+                    <td>Check Balance</td>
+                    <td>Retrieves current account balance</td>
+                </tr>
+            </table>
 
         </section>
-        
+
         <section id="working">
 
             <h2>Internal Architecture</h2>
 
             <p>
-                The system follows a modular structure where each banking operation is handled by specific functions or classes.
+                The system follows a modular, service-based architecture where each banking operation is isolated,
+                testable, and transaction-safe.
             </p>
 
+            <pre><code>
+create_account()   → user onboarding
+
+deposit()          → fund addition logic
+
+withdraw()         → validation + deduction
+
+transfer()         → secure fund movement
+
+check_balance()    → state retrieval
+</code></pre>
+
+        </section>
+
+
+        <section id="rules">
+
+            <h2>Business Logic & Constraints</h2>
+
             <ul>
-                <li><code>create_account()</code> → registers new user</li>
-                <li><code>deposit()</code> → handles money addition</li>
-                <li><code>withdraw()</code> → processes withdrawals with validation</li>
-                <li><code>transfer()</code> → manages fund transfers</li>
-                <li><code>check_balance()</code> → retrieves account balance</li>
+                <li>Transaction limits enforced via configuration</li>
+                <li>No negative balances allowed</li>
+                <li>Only ACTIVE accounts can perform operations</li>
+                <li>Ownership-based authorization checks</li>
+                <li>All transactions are recorded for auditing</li>
             </ul>
 
         </section>
@@ -74,7 +148,7 @@
 
             <h2>Example System Output</h2>
 
-<pre>
+            <pre>
 <code>
 
 Advanced Banking System
@@ -97,7 +171,7 @@ Updated Balance: 15000
         </section>
 
         <section id="techused">
-            
+
             <h2>Technologies Used</h2>
 
             <ul>
@@ -112,11 +186,32 @@ Updated Balance: 15000
 
         <section id="link">
 
-            <h2>GitHub Repository</h2>
-            
-            <a href="https://github.com/Dhruv-Cmds/fastapi-banking-system" target="_blank">
-            View Source Code
-            </a>
+            <h2>Project Links</h2>
+
+            <ul>
+                <li>
+                    <a href="https://github.com/Dhruv-Cmds/fastapi-banking-system" target="_blank">
+                        GitHub Repository
+                    </a>
+                </li>
+                <li>
+                    <a href="https://fastapi-banking-system.onrender.com/docs" target="_blank">
+                        API Documentation
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+        <section id="why">
+
+            <h2>Why This Project?</h2>
+
+            <p>
+                This system simulates real-world banking constraints with a strong focus on transactional integrity,
+                validation, and scalable backend design. It demonstrates how secure financial systems are built
+                using clean architecture and rule-based logic.
+            </p>
 
         </section>
 
