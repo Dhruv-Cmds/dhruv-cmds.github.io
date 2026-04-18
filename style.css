@@ -137,12 +137,20 @@ font-size:20px;
 color:#c7a6ff;
 }
 
+section {
+    margin-bottom: 30px;
+}
+
 section h3 {
     text-align:center;
     margin-top: 12px;
     margin-bottom: 6px;
     color: #9aa0ad;
     font-size: 15px;
+}
+
+h3 {
+    margin-top: 15px;
 }
 
 /* =========================
@@ -422,6 +430,7 @@ width:700px;
     background: #1e293b;
     font-size: 0.9rem;
 }
+
 
 table {
     width: 100%;
