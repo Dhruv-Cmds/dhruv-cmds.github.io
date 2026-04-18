@@ -4,69 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Atm</title>
-    <link rel="stylesheet" href="style.css"></head>
+    <title>Advanced ATM System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
     <header>
 
-        <h1>Advanced ATM System</h1>
+        <h1>🏧 Advanced ATM System</h1>
 
         <p>
-            A Python CLI banking simulation that models real ATM operations such as
-            PIN authentication, withdrawals, deposits, and transaction history.
-            The system stores user data securely using JSON files and validates
-            inputs to prevent incorrect operations.
+            A Python-based ATM simulation that models real-world banking interactions including secure PIN authentication,
+            transaction handling, and persistent data storage with validation safeguards.
         </p>
+
+        <div class="badges">
+            <span>🔐 PIN Authentication</span>
+            <span>💸 Transactions</span>
+            <span>🧾 History Tracking</span>
+            <span>📂 Persistent Storage</span>
+        </div>
 
     </header>
 
     <main>
 
-        <section id="feture">
+        <!-- FEATURES -->
+        <section id="feature">
 
-            <h2>What it can do</h2>
+            <h1>Core Features</h1>
+
+            <h2>Authentication</h2>
 
             <ul>
-                <li>Secure PIN authentication</li>
-                <li>Deposit and withdrawal system</li>
-                <li>Balance checking</li>
-                <li>Transaction history tracking</li>
-                <li>Persistent data storage using txt</li>
-                <li>Input validation to prevent crashes</li>
+                <li>Secure PIN-based login system</li>
+                <li>Access restricted until authentication succeeds</li>
+            </ul>
+
+            <h2>Transactions</h2>
+            
+            <ul>
+                <li>Deposit and withdraw money</li>
+                <li>Real-time balance updates</li>
+                <li>Prevents invalid transactions</li>
+            </ul>
+
+
+            <h2>Account Tracking</h2>
+
+            <ul>
+                <li>Balance checking functionality</li>
+                <li>Transaction history logging</li>
+            </ul>
+
+            <h2>Data Persistence</h2>
+
+            <ul>
+                <li>Data stored using local text/JSON files</li>
+                <li>Maintains state between sessions</li>
             </ul>
 
         </section>
 
+        <!-- ARCHITECTURE -->
+        <section id="working">
 
-            <section id="working">
+            <h2>System Architecture</h2>
 
-                <h2>How it works</h2>
+            <p>
+                The system is designed using a modular approach where each component is responsible
+                for a specific part of the ATM workflow.
+            </p>
 
-                <h4>The ATM system follows a modular structure.</h4>
+<pre><code>
+Authentication Module → verifies user PIN
+Transaction Module   → handles deposit & withdrawal
+Storage Module       → manages file-based persistence
+Validation Layer     → prevents invalid inputs & errors
+</code></pre>
 
-                <ol>
+        </section>
 
-                    <li>Authentication Module
-                    Validates user PIN before allowing access.</li>
+        <!-- BUSINESS RULES -->
+        <section id="rules">
 
-                    <li>Transaction Module
-                    Handles deposit and withdrawal operations.</li>
+            <h2>System Rules & Constraints</h2>
 
-                    <li>Data Storage Module
-                    Stores account details and balances in txt files.</li>
+            <ul>
+                <li>Access is denied after incorrect PIN attempts</li>
+                <li>Withdrawals cannot exceed available balance</li>
+                <li>Negative or invalid inputs are rejected</li>
+                <li>All transactions update stored data immediately</li>
+            </ul>
 
-                    <li>Validation Layer
-                    Prevents invalid inputs and ensures stable execution.</li>
+        </section>
 
-                </ol>
+        <!-- OUTPUT -->
+        <section id="output">
 
-            </section>
+            <h2>Example Terminal Output</h2>
 
-            <section id="output">
-
-                <h2>Example Terminal Output</h2>
+            <p>Sample interaction from the command-line interface:</p>
 
 <pre>
 <code>
@@ -87,26 +126,45 @@ New Balance: 1500
 
         </section>
 
+        <!-- TECH STACK -->
         <section id="techused">
             
             <h2>Technologies Used</h2>
 
             <ul>
-
-                <li>Python</li>
-                <li>txt file storage</li>
-                <li>Command Line Interface</li>
-                <li>Object Oriented Programming</li>
-
+                <li><strong>Language:</strong> Python</li>
+                <li><strong>Storage:</strong> Text / JSON files</li>
+                <li><strong>Interface:</strong> Command Line (CLI)</li>
+                <li><strong>Design:</strong> Object-Oriented Programming</li>
             </ul>
 
         </section>
 
+        <!-- LINKS -->
         <section id="link">
 
-            <h2> GitHub Repository</h2>
-            
-            <a href="https://github.com/Dhruv-Cmds/An-Advance-Atm" target="_blank">View Source Code</a>
+            <h2>Project Links</h2>
+
+            <ul>
+                <li>
+                    <a href="https://github.com/Dhruv-Cmds/An-Advance-Atm" target="_blank">
+                        💻 GitHub Repository
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- WHY -->
+        <section id="why">
+
+            <h2>Why This Project?</h2>
+
+            <p>
+                This project demonstrates how real-world ATM systems manage authentication,
+                transactions, and persistent storage while ensuring stability through validation.
+                It highlights structured programming, modular design, and safe state management.
+            </p>
 
         </section>
 
