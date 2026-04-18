@@ -10,6 +10,8 @@
 
 <body>
 
+    <canvas id="particles"></canvas>
+
     <header>
 
         <h1>🏦 Advanced Banking System</h1>
@@ -19,11 +21,15 @@
             operations.
         </p>
 
+        <div class="terminal">
+            <pre><code id="typing"></code></pre>
+        </div>
+
         <div class="badges">
-            <span>⚡ FastAPI Powered</span>
-            <span>🔐 JWT Secured</span>
-            <span>💸 Transaction Engine</span>
-            <span>🧾 Ledger Tracking</span>
+            <span>FastAPI Powered</span>
+            <span>JWT Secured</span>
+            <span>Transaction Engine</span>
+            <span>Ledger Tracking</span>
         </div>
 
     </header>
@@ -115,20 +121,15 @@
                 testable, and transaction-safe.
             </p>
 
-            <pre><code>
+<pre><code>
 create_account()   → user onboarding
-
 deposit()          → fund addition logic
-
 withdraw()         → validation + deduction
-
 transfer()         → secure fund movement
-
 check_balance()    → state retrieval
 </code></pre>
 
         </section>
-
 
         <section id="rules">
 
@@ -148,9 +149,8 @@ check_balance()    → state retrieval
 
             <h2>Example System Output</h2>
 
-            <pre>
+<pre>
 <code>
-
 Advanced Banking System
 
 1. Create Account
@@ -164,7 +164,6 @@ Amount: 5000
 
 Deposit successful
 Updated Balance: 15000
-
 </code>
 </pre>
 
@@ -209,8 +208,7 @@ Updated Balance: 15000
 
             <p>
                 This system simulates real-world banking constraints with a strong focus on transactional integrity,
-                validation, and scalable backend design. It demonstrates how secure financial systems are built
-                using clean architecture and rule-based logic.
+                validation, and scalable backend design.
             </p>
 
         </section>
@@ -218,10 +216,80 @@ Updated Balance: 15000
     </main>
 
     <footer>
-
         <p>© <time datetime="2026">2026</time> Dhruv Patel</p>
-
     </footer>
+
+    <!-- PARTICLES -->
+    <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+
+    for(let i=0;i<80;i++){
+        particles.push({
+            x: Math.random()*canvas.width,
+            y: Math.random()*canvas.height,
+            r: Math.random()*2,
+            dx: (Math.random()-0.5)*0.5,
+            dy: (Math.random()-0.5)*0.5
+        });
+    }
+
+    function draw(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+
+        particles.forEach(p=>{
+            ctx.beginPath();
+            ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+            ctx.fillStyle="#7b5cff";
+            ctx.fill();
+
+            p.x += p.dx;
+            p.y += p.dy;
+
+            if(p.x<0||p.x>canvas.width) p.dx*=-1;
+            if(p.y<0||p.y>canvas.height) p.dy*=-1;
+        });
+
+        requestAnimationFrame(draw);
+    }
+
+    draw();
+    </script>
+
+    <!-- TERMINAL -->
+    <script>
+    const text = [
+    "> Banking system booting...",
+    "> Initializing services...",
+    "> Auth module ✓",
+    "> Transactions ✓",
+    "> Ready."
+    ];
+
+    let i=0,j=0;
+    const el=document.getElementById("typing");
+
+    function type(){
+    if(i<text.length){
+        if(j<text[i].length){
+            el.innerHTML += text[i].charAt(j);
+            j++;
+            setTimeout(type,30);
+        } else {
+            el.innerHTML += "\n";
+            i++; j=0;
+            setTimeout(type,200);
+        }
+    }
+    }
+
+    type();
+    </script>
 
 </body>
 

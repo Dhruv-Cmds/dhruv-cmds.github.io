@@ -8,6 +8,8 @@
 </head>
 
 <body>
+
+    <canvas id="particles"></canvas>
     
     <header>
         
@@ -21,6 +23,10 @@
             returning books, tracking availability, and maintaining user records
             with structured program logic and data persistence.
         </p>
+
+        <div class="terminal">
+<pre><code id="typing"></code></pre>
+</div>
 
     </header>
 
@@ -144,6 +150,78 @@ Book issued successfully
         <p>© <time datetime="2026">2026</time> Dhruv Patel</p>
 
     </footer>
+
+    <script>
+// PARTICLES (your existing code)
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<80;i++){
+    particles.push({
+        x: Math.random()*canvas.width,
+        y: Math.random()*canvas.height,
+        r: Math.random()*2,
+        dx: (Math.random()-0.5)*0.5,
+        dy: (Math.random()-0.5)*0.5
+    });
+}
+
+function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach(p=>{
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle="#7b5cff";
+        ctx.fill();
+
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if(p.x<0||p.x>canvas.width) p.dx*=-1;
+        if(p.y<0||p.y>canvas.height) p.dy*=-1;
+    });
+
+    requestAnimationFrame(draw);
+}
+
+draw();
+</script>
+
+<!-- ADD THIS NEW SCRIPT BELOW -->
+<script>
+const text = [
+"> Library system booting...",
+"> Loading records...",
+"> Book database ✓",
+"> User system ✓",
+"> Ready."
+];
+
+let i=0,j=0;
+const el=document.getElementById("typing");
+
+function type(){
+if(i<text.length){
+    if(j<text[i].length){
+        el.innerHTML += text[i].charAt(j);
+        j++;
+        setTimeout(type,30);
+    } else {
+        el.innerHTML += "\n";
+        i++; j=0;
+        setTimeout(type,200);
+    }
+}
+}
+
+type();
+</script>
 
 </body>
 

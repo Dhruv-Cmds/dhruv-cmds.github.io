@@ -11,6 +11,8 @@
 
 <body>
 
+    <canvas id="particles"></canvas>
+
     <header>
 
         <h1>Mini Database Engine</h1>
@@ -21,18 +23,21 @@
             Designed to demonstrate how database engines manage structured data at a fundamental level.
         </p>
 
+        <div class="terminal">
+            <pre><code id="typing"></code></pre>
+        </div>
+
         <div class="badges">
-            <span>📦 Table Management</span>
-            <span>🧾 Record Operations</span>
-            <span>📂 JSON Storage</span>
-            <span>⚙️ CLI Commands</span>
+            <span>Table Management</span>
+            <span>Record Operations</span>
+            <span>JSON Storage</span>
+            <span>CLI Commands</span>
         </div>
 
     </header>
 
     <main>
 
-        <!-- FEATURES -->
         <section id="feature">
 
             <h1>Core Features</h1>
@@ -65,7 +70,7 @@
             </ul>
 
             <br>
-            
+
             <h2>Command Interface</h2>
 
             <ul>
@@ -75,7 +80,6 @@
 
         </section>
 
-        <!-- ARCHITECTURE -->
         <section id="working">
 
             <h2>System Architecture</h2>
@@ -94,7 +98,6 @@ Command Parser    → interprets user CLI commands
 
         </section>
 
-        <!-- BUSINESS RULES -->
         <section id="rules">
 
             <h2>System Rules & Constraints</h2>
@@ -108,7 +111,6 @@ Command Parser    → interprets user CLI commands
 
         </section>
 
-        <!-- OUTPUT -->
         <section id="output">
 
             <h2>Example Terminal Output</h2>
@@ -138,7 +140,6 @@ ID | NAME | AGE | CITY
 
         </section>
 
-        <!-- TECH STACK -->
         <section id="techused">
 
             <h2>Technologies Used</h2>
@@ -152,7 +153,6 @@ ID | NAME | AGE | CITY
 
         </section>
 
-        <!-- LINKS -->
         <section id="link">
 
             <h2>Project Links</h2>
@@ -167,7 +167,6 @@ ID | NAME | AGE | CITY
 
         </section>
 
-        <!-- WHY -->
         <section id="why">
 
             <h2>Why This Project?</h2>
@@ -175,8 +174,6 @@ ID | NAME | AGE | CITY
             <p>
                 This project demonstrates the core principles behind database systems,
                 including structured data storage, CRUD operations, and command parsing.
-                It highlights how real databases manage data internally using modular
-                components and persistent storage mechanisms.
             </p>
 
         </section>
@@ -184,10 +181,80 @@ ID | NAME | AGE | CITY
     </main>
 
     <footer>
-
         <p>© <time datetime="2026">2026</time> Dhruv Patel</p>
-
     </footer>
+
+    <!-- PARTICLES -->
+    <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+
+    for(let i=0;i<80;i++){
+        particles.push({
+            x: Math.random()*canvas.width,
+            y: Math.random()*canvas.height,
+            r: Math.random()*2,
+            dx: (Math.random()-0.5)*0.5,
+            dy: (Math.random()-0.5)*0.5
+        });
+    }
+
+    function draw(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+
+        particles.forEach(p=>{
+            ctx.beginPath();
+            ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+            ctx.fillStyle="#7b5cff";
+            ctx.fill();
+
+            p.x += p.dx;
+            p.y += p.dy;
+
+            if(p.x<0||p.x>canvas.width) p.dx*=-1;
+            if(p.y<0||p.y>canvas.height) p.dy*=-1;
+        });
+
+        requestAnimationFrame(draw);
+    }
+
+    draw();
+    </script>
+
+    <!-- TERMINAL -->
+    <script>
+    const text = [
+    "> Database engine booting...",
+    "> Initializing tables...",
+    "> Storage system ✓",
+    "> Command parser ✓",
+    "> Ready."
+    ];
+
+    let i=0,j=0;
+    const el=document.getElementById("typing");
+
+    function type(){
+    if(i<text.length){
+        if(j<text[i].length){
+            el.innerHTML += text[i].charAt(j);
+            j++;
+            setTimeout(type,30);
+        } else {
+            el.innerHTML += "\n";
+            i++; j=0;
+            setTimeout(type,200);
+        }
+    }
+    }
+
+    type();
+    </script>
 
 </body>
 

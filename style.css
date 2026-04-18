@@ -606,3 +606,269 @@ transform:translateY(-3px);
 border-color:#7b5cff;
 box-shadow:0 5px 15px rgba(123,92,255,0.1);
 }
+
+
+/* =========================
+PARTICLE BACKGROUND
+========================= */
+
+#particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-2;
+}
+
+/* slight overlay for depth */
+body::after{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(13,13,18,0.7);
+z-index:-1;
+}
+
+/* =========================
+TERMINAL STYLE
+========================= */
+
+.terminal{
+margin-top:20px;
+background:#0b0b12;
+border:1px solid #2a2a3a;
+padding:15px;
+border-radius:8px;
+font-size:13px;
+text-align:left;
+}
+
+#typing{
+color:#7b5cff;
+}
+
+/* ===== PARTICLES ===== */
+#particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-2;
+}
+
+/* ===== TERMINAL ===== */
+.terminal{
+margin-top:20px;
+background:#0b0b12;
+border:1px solid #2a2a3a;
+padding:15px;
+border-radius:8px;
+font-size:13px;
+text-align:left;
+}
+
+#typing{
+color:#7b5cff;
+}
+
+/* ===== PROJECT PREVIEW ===== */
+.project-card{
+position:relative;
+overflow:hidden;
+}
+
+.preview{
+position:absolute;
+bottom:-100%;
+left:0;
+width:100%;
+background:rgba(0,0,0,0.85);
+padding:15px;
+transition:.3s;
+font-size:13px;
+}
+
+.project-card:hover .preview{
+bottom:0;
+}
+
+
+/* =========================
+ADDITIONAL CLEAN + FINAL ENHANCEMENTS
+(Append this BELOW your current CSS)
+========================= */
+
+/* Remove duplicate conflicts safely handled by cascade */
+
+/* ===== GLOBAL SMOOTH UI ===== */
+*{
+scroll-behavior:smooth;
+}
+
+/* ===== HEADER DEPTH ===== */
+header{
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+position:relative;
+overflow:hidden;
+}
+
+header::after{
+content:"";
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(90deg,transparent,#7b5cff,transparent);
+}
+
+/* ===== NAVBAR GLASS ===== */
+nav{
+backdrop-filter:blur(10px);
+background:rgba(16,16,23,0.85);
+}
+
+/* ===== SECTION DEPTH ===== */
+section{
+box-shadow:0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* ===== BADGE HOVER ===== */
+.badges span:hover,
+.badges li:hover{
+background:#7b5cff;
+color:#fff;
+cursor:pointer;
+transform:translateY(-2px);
+}
+
+/* ===== TABLE IMPROVEMENT ===== */
+tr:hover{
+background:rgba(123,92,255,0.05);
+}
+
+/* ===== CODE BLOCK IMPROVEMENT ===== */
+pre{
+position:relative;
+}
+
+pre::before{
+content:"code";
+position:absolute;
+top:5px;
+right:10px;
+font-size:10px;
+color:#7b5cff;
+opacity:0.6;
+}
+
+/* ===== TERMINAL BLINK CURSOR ===== */
+#typing::after{
+content:"|";
+animation:blink 1s infinite;
+margin-left:4px;
+}
+
+@keyframes blink{
+0%,100%{opacity:1;}
+50%{opacity:0;}
+}
+
+/* ===== PROJECT CARD INTERACTION ===== */
+.project-card a{
+display:inline-block;
+margin-top:10px;
+font-size:13px;
+color:#7b5cff;
+}
+
+.project-card a:hover{
+text-decoration:underline;
+}
+
+/* ===== PREVIEW TEXT STYLE ===== */
+.preview p{
+margin:0;
+color:#d6d6de;
+}
+
+/* ===== SECTION TITLE GLOW ===== */
+section h2{
+text-shadow:0 0 6px rgba(123,92,255,0.4);
+}
+
+/* ===== FOOTER POLISH ===== */
+footer{
+background:#0b0b12;
+}
+
+/* ===== BUTTON INTERACTION ===== */
+.btn:active{
+transform:scale(0.96);
+}
+
+/* ===== IMAGE DEPTH ===== */
+img{
+box-shadow:0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* ===== SCROLL FADE IMPROVE ===== */
+section{
+will-change:transform, opacity;
+}
+
+/* ===== MOBILE TOUCH IMPROVEMENTS ===== */
+@media (max-width:700px){
+
+.project-card:hover{
+transform:none;
+}
+
+.preview{
+position:relative;
+bottom:0;
+background:transparent;
+padding:0;
+}
+
+}
+
+/* ===== EXTRA GLOW LAYER ===== */
+body::before{
+filter:blur(40px);
+opacity:0.7;
+}
+
+/* ===== NAV ACTIVE LINK ===== */
+nav a.active{
+color:#7b5cff;
+}
+
+/* ===== LOADING FADE ===== */
+body{
+animation:fadeInPage .6s ease;
+}
+
+@keyframes fadeInPage{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* ===== TERMINAL GLOW ===== */
+.terminal{
+box-shadow:0 0 15px rgba(123,92,255,0.2);
+}
+
+/* ===== FINAL POLISH ===== */
+section:hover{
+transition:all .25s ease;
+}
+
+.project-card:hover{
+transition:all .25s ease;
+}
