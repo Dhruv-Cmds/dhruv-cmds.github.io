@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About operating System</title>
+    <title>Python OS Simulator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,81 +14,131 @@
         <h1>Python OS Simulator</h1>
 
         <p>
-            A command-line operating system simulation that replicates basic
-            Linux-style commands such as file creation, directory navigation,
-            and file management using Python.
-
-            The system parses user commands and maps them to internal
-            functions that perform operations like creating files,
-            removing folders, check current process, give memory to tasks and listing directories.
-            
+            A command-line operating system simulator that mimics core Linux-style behaviors including
+            file management, process handling, and command execution. Built in Python to demonstrate
+            how operating systems interpret commands and manage system resources.
         </p>
+
+        <div class="badges">
+            <span>🖥️ CLI Shell</span>
+            <span>📂 File System Ops</span>
+            <span>⚙️ Process Handling</span>
+            <span>🧠 Command Parsing</span>
+        </div>
 
     </header>
 
     <main>
 
-        <section id="feture">
+        <!-- FEATURES -->
+        <section id="feature">
 
-            <h2>Fetures</h2>
+            <h1>Core Features</h1>
             
+            <h2>Command Interface</h2>
+
             <ul>
-     
-             <li>Command-based interface similar to Linux shell</li>
-             <li>File and folder creation</li>
-             <li>File and directory deletion</li>
-             <li>Give memory to task</li>
-             <li>Manage processes</li>
-             <li>Directory navigation</li>
-             <li>Command parsing system</li>
-             <li>Audit logs</li>
-             <li>Error handling for invalid commands</li>
-     
+                <li>Linux-style command-line interaction</li>
+                <li>Custom command parsing system</li>
+                <li>Error handling for invalid commands</li>
             </ul>
             
+            <br>
+
+            <h2>File System Operations</h2>
+
+            <ul>
+                <li>Create and delete files and directories</li>
+                <li>Navigate directory structure</li>
+                <li>List directory contents</li>
+            </ul>
+
+            <br>
+
+            <h2>Process & Memory Simulation</h2>
+
+            <ul>
+                <li>Basic process tracking</li>
+                <li>Simulated memory allocation for tasks</li>
+                <li>System activity logging</li>
+            </ul>
+
         </section>
 
+        <!-- COMMANDS -->
         <section id="cmds">
 
-            <h2>Commands System</h2>
-            
-            <ul>
+            <h2>Command System</h2>
 
-                <li><code>ls</code> → list directory contents</li>
-                <li><code>mkdir folder</code> → create new folder</li>
-                <li><code>touch file.txt</code> → create file</li>
-                <li><code>rm file.txt</code> → delete file</li>
-                <li><code>cd folder</code> → change directory</li>
-
-            </ul>
+            <table>
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><code>ls</code></td>
+                    <td>List directory contents</td>
+                </tr>
+                <tr>
+                    <td><code>mkdir folder</code></td>
+                    <td>Create new directory</td>
+                </tr>
+                <tr>
+                    <td><code>touch file.txt</code></td>
+                    <td>Create new file</td>
+                </tr>
+                <tr>
+                    <td><code>rm file.txt</code></td>
+                    <td>Delete file</td>
+                </tr>
+                <tr>
+                    <td><code>cd folder</code></td>
+                    <td>Change directory</td>
+                </tr>
+            </table>
 
         </section>
         
+        <!-- ARCHITECTURE -->
         <section id="working">
 
-            <h2>Internal Architecture</h2>
+            <h2>System Architecture</h2>
 
             <p>
-                The command parser identifies the command keyword
-                and calls the related function inside the system.
+                The simulator uses a command parser that interprets user input and maps each command
+                to its corresponding system function, similar to how real shells operate.
             </p>
 
-            <p>For example:</p>
-            
-            <ul>
+<pre><code>
+Command Parser     → interprets user input
+File Manager       → handles file & directory operations
+Process Manager    → simulates running processes
+Memory Handler     → allocates memory to tasks
+Logger             → tracks system activity
+</code></pre>
 
-                <li>mkdir → create_directory()</li>
-                <li>touch → create_file()</li>
-                <li>rm → delete_file()</li>
-                <li>cd → change_directory()</li>
-                
+        </section>
+
+        <!-- RULES -->
+        <section id="rules">
+
+            <h2>System Rules & Constraints</h2>
+
+            <ul>
+                <li>Invalid commands are safely handled</li>
+                <li>Directories must exist before navigation</li>
+                <li>Files cannot be deleted if they do not exist</li>
+                <li>Memory allocation follows predefined limits</li>
             </ul>
 
         </section>
 
+        <!-- OUTPUT -->
         <section id="output">
 
-            <h2>Terminal Output</h2>
+            <h2>Example Terminal Output</h2>
+
+            <p>Sample interaction with the OS simulator:</p>
 
 <pre>
 <code>
@@ -108,32 +158,50 @@ main.py
 
 > rm main.py
 File deleted
-
 </code>
 </pre>
 
         </section>
 
-         <section id="techused">
+        <!-- TECH -->
+        <section id="techused">
             
             <h2>Technologies Used</h2>
 
             <ul>
-
-                <li>Python</li>
-                <li>Command Line Interface</li>
-                <li>File System Operations</li>
-                <li>Modular Function Design</li>
-
+                <li><strong>Language:</strong> Python</li>
+                <li><strong>Interface:</strong> Command Line (CLI)</li>
+                <li><strong>System Ops:</strong> File System Handling</li>
+                <li><strong>Design:</strong> Modular Function Architecture</li>
             </ul>
 
         </section>
 
-         <section id="link">
+        <!-- LINKS -->
+        <section id="link">
 
-            <h2> GitHub Repository</h2>
+            <h2>Project Links</h2>
             
-            <a href="https://github.com/Dhruv-Cmds/Python-os-simulator" target="_blank">View Source Code</a>
+            <ul>
+                <li>
+                    <a href="https://github.com/Dhruv-Cmds/Python-os-simulator" target="_blank">
+                        GitHub Repository
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- WHY -->
+        <section id="why">
+
+            <h2>Why This Project?</h2>
+
+            <p>
+                This project demonstrates how operating systems interpret commands, manage files,
+                and simulate processes. It highlights core OS concepts such as command parsing,
+                resource management, and modular system design in a simplified environment.
+            </p>
 
         </section>
 
