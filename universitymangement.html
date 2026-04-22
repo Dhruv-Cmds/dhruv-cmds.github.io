@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <canvas id="particles"></canvas>
+
+    <header>
+        <h1>🎓 University Management System</h1>
+
+        <p>
+            A scalable backend system built with FastAPI, featuring authentication,
+            role-based access, and complete academic management.
+        </p>
+
+        <div class="terminal">
+            <pre><code id="typing"></code></pre>
+        </div>
+
+        <div class="badges">
+            <span>FastAPI</span>
+            <span>JWT Auth</span>
+            <span>RBAC</span>
+            <span>MySQL</span>
+        </div>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Core Features</h2>
+            <ul>
+                <li>JWT Authentication (Signup & Login)</li>
+                <li>Role-Based Access Control (Admin, Faculty)</li>
+                <li>Course Management System</li>
+                <li>Student & Faculty Management</li>
+                <li>Enrollment System</li>
+                <li>Full Test Coverage using Pytest</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Frontend Dashboard</h2>
+            <ul>
+                <li>Signup & Login Interface</li>
+                <li>Create Courses, Students, Faculty</li>
+                <li>Enrollment Management</li>
+                <li>API interaction without Postman</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>System Operations</h2>
+            <table>
+                <tr>
+                    <th>Operation</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Create Course</td>
+                    <td>Add new course</td>
+                </tr>
+                <tr>
+                    <td>Create Student</td>
+                    <td>Register student</td>
+                </tr>
+                <tr>
+                    <td>Create Faculty</td>
+                    <td>Add faculty</td>
+                </tr>
+                <tr>
+                    <td>Enroll Student</td>
+                    <td>Assign student to course</td>
+                </tr>
+                <tr>
+                    <td>Authentication</td>
+                    <td>JWT-based login/signup</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Architecture</h2>
+            <p>Clean modular architecture using services and dependency injection.</p>
+
+            <pre><code>
+routes → services → models
+
+auth_service()      → login/signup
+course_service()    → course logic
+student_service()   → student logic
+faculty_service()   → faculty logic
+enrollment_service()→ linking system
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Security</h2>
+            <ul>
+                <li>Password hashing with bcrypt</li>
+                <li>JWT token authentication</li>
+                <li>Protected API routes</li>
+                <li>Backend-controlled role permissions</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Example API Response</h2>
+
+            <pre><code>
+POST /auth/login
+
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIs...",
+  "token_type": "bearer"
+}
+</code></pre>
+
+        </section>
+
+        <section>
+            <h2>Tech Stack</h2>
+            <ul>
+                <li><strong>Backend:</strong> FastAPI</li>
+                <li><strong>Database:</strong> MySQL</li>
+                <li><strong>ORM:</strong> SQLAlchemy</li>
+                <li><strong>Validation:</strong> Pydantic</li>
+                <li><strong>Testing:</strong> Pytest</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Project Setup</h2>
+
+            <pre><code>
+git clone your-repo
+cd project
+pip install -r requirements.txt
+
+uvicorn app.main:app --reload
+</code></pre>
+
+        </section>
+
+        <section>
+            <h2>Why This Project?</h2>
+            <p>
+                Designed to simulate real-world university systems with secure authentication,
+                modular backend design, and scalable architecture.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 University System API</p>
+    </footer>
+
+    <!-- PARTICLES -->
+    <script>
+        const canvas = document.getElementById("particles");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particles = [];
+
+        for (let i = 0; i < 80; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                r: Math.random() * 2,
+                dx: (Math.random() - 0.5) * 0.5,
+                dy: (Math.random() - 0.5) * 0.5
+            });
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(p => {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = "#7b5cff";
+                ctx.fill();
+
+                p.x += p.dx;
+                p.y += p.dy;
+
+                if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+            });
+
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+    </script>
+
+    <!-- TERMINAL -->
+    <script>
+        const lines = [
+            "> Booting University System...",
+            "> Loading modules...",
+            "> Auth ✓",
+            "> Courses ✓",
+            "> Students ✓",
+            "> Ready 🚀"
+        ];
+
+        let i = 0, j = 0;
+        const el = document.getElementById("typing");
+
+        function type() {
+            if (i < lines.length) {
+                if (j < lines[i].length) {
+                    el.innerHTML += lines[i].charAt(j);
+                    j++;
+                    setTimeout(type, 30);
+                } else {
+                    el.innerHTML += "\n";
+                    i++; j = 0;
+                    setTimeout(type, 200);
+                }
+            }
+        }
+        type();
+    </script>
+
+</body>
+
+</html>
