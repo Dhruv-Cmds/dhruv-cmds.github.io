@@ -17,13 +17,23 @@ I focus on building real-world applications involving API development, database 
 - SQLAlchemy
 - Pydantic
 - HTML & CSS
+- Git & GitHub
+- Docker 
 
 ## 🚀 Projects Featured
 - 🏦 FastAPI Banking System
+- 🎓 University Management System
 - 🏧 Advanced ATM System
 - 🗄️ Mini Database Engine
 - ⚙️ Python OS Simulator
 
-## 🔗 GitHub
+## 🎯 Focus Areas
+- Backend API Development
+- Database Design & Optimization
+- System Simulation & Low-level Logic
+- Scalable Application Architecture
 
-https://github.com/Dhruv-Cmds
+## 📫 Contact
+- GitHub: https://github.com/Dhruv-Cmds
+- Email: pd1900565@gmail.com
+- LinkedIn: https://www.linkedin.com/in/patel-dhruv-a77a313b4/
