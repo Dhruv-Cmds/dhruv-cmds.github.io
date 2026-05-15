@@ -17,8 +17,8 @@
         <h1>🏦 Advanced Banking System</h1>
 
         <p>
-            A production-ready fintech backend built with FastAPI for secure, scalable, and rule-driven financial
-            operations.
+            A production-style banking backend focused on transactional integrity, async architecture, infrastructure reliability,
+            and scalable financial operations using FastAPI, MySQL, Docker, and Async SQLAlchemy.
         </p>
 
         <div class="terminal">
@@ -29,7 +29,7 @@
             <span>FastAPI Powered</span>
             <span>JWT Secured</span>
             <span>Transaction Engine</span>
-            <span>Ledger Tracking</span>
+            <span>Ledger Tracking</span
         </div>
 
     </header>
@@ -117,8 +117,8 @@
             <h2>Internal Architecture</h2>
 
             <p>
-                The system follows a modular, service-based architecture where each banking operation is isolated,
-                testable, and transaction-safe.
+                The backend follows a layered async architecture with separated routes, services, schemas, and database layers.
+                Banking operations are designed to remain transaction-safe using commit/rollback handling and isolated business logic.
             </p>
 
 <pre><code>
@@ -141,6 +141,20 @@ check_balance()    → state retrieval
                 <li>Only ACTIVE accounts can perform operations</li>
                 <li>Ownership-based authorization checks</li>
                 <li>All transactions are recorded for auditing</li>
+            </ul>
+
+        </section>
+
+        <section id="engineering">
+
+            <h2>Engineering Challenges</h2>
+
+            <ul>
+                <li>Resolved async SQLAlchemy cross-event-loop issues on Windows</li>
+                <li>Fixed database connection leaks during concurrent requests</li>
+                <li>Implemented atomic transaction rollback handling</li>
+                <li>Benchmarked API performance using k6 load testing</li>
+                <li>Improved connection pool stability under high concurrency</li>
             </ul>
 
         </section>
@@ -183,6 +197,20 @@ Updated Balance: 15000
 
         </section>
 
+        <section id="infra">
+
+            <h2>Infrastructure & DevOps</h2>
+
+            <ul>
+                <li>Dockerized multi-service environment</li>
+                <li>Environment-based configuration management</li>
+                <li>Health monitoring endpoint for deployment checks</li>
+                <li>GitHub Actions CI integration</li>
+                <li>k6 load testing for concurrency benchmarking</li>
+            </ul>
+
+        </section>
+
         <section id="link">
 
             <h2>Project Links</h2>
@@ -207,17 +235,17 @@ Updated Balance: 15000
             <h2>Why This Project?</h2>
 
             <p>
-                This system simulates real-world banking constraints with a strong focus on transactional integrity,
-                validation, and scalable backend design.
+                This project was built to explore production-style backend engineering concepts including async architecture,
+                transaction safety, infrastructure bottlenecks, Dockerized deployments, and scalable API design beyond basic CRUD systems.
             </p>
 
         </section>
 
     </main>
 
-    <footer>
-        <p>© <time datetime="2026">2026</time> Dhruv Patel</p>
-    </footer>
+    <p>
+        Backend Engineering Portfolio • Dhruv Patel • FastAPI • Systems Design • Async Architecture
+    </p>
 
     <!-- PARTICLES -->
     <script>
