@@ -17,8 +17,9 @@
         <h1>🎓 University Management System</h1>
 
         <p>
-            A scalable backend system built with FastAPI, featuring authentication,
-            role-based access, and complete academic management.
+            A production-style university management backend focused on async architecture,
+            role-based authorization, transactional consistency, and scalable API design
+            using FastAPI, MySQL, Docker, and Async SQLAlchemy.
         </p>
 
         <div class="terminal">
@@ -89,7 +90,12 @@
 
         <section>
             <h2>Architecture</h2>
-            <p>Clean modular architecture using services and dependency injection.</p>
+
+            <p>
+                The backend follows a layered async architecture with separated routes,
+                services, queries, and ORM models designed for maintainability,
+                transaction safety, and scalable API operations.
+            </p>
 
             <pre><code>
 routes → services → models
@@ -103,6 +109,7 @@ enrollment_service()→ linking system
         </section>
 
         <section>
+
             <h2>Security</h2>
             <ul>
                 <li>Password hashing with bcrypt</li>
@@ -110,6 +117,21 @@ enrollment_service()→ linking system
                 <li>Protected API routes</li>
                 <li>Backend-controlled role permissions</li>
             </ul>
+
+        </section>
+
+        <section>
+
+            <h2>Engineering Challenges</h2>
+
+            <ul>
+                <li>Handled async database operations using Async SQLAlchemy + aiomysql</li>
+                <li>Stress-tested authenticated APIs with k6 under high concurrency</li>
+                <li>Implemented role-based route protection with JWT authentication</li>
+                <li>Debugged Docker networking and concurrent database bottlenecks</li>
+                <li>Maintained API stability under mixed authenticated CRUD workloads</li>
+            </ul>
+            
         </section>
 
         <section>
@@ -127,14 +149,33 @@ POST /auth/login
         </section>
 
         <section>
+
             <h2>Tech Stack</h2>
-            <ul>
-                <li><strong>Backend:</strong> FastAPI</li>
+
+                <li><strong>Backend:</strong> FastAPI + Async Python</li>
                 <li><strong>Database:</strong> MySQL</li>
-                <li><strong>ORM:</strong> SQLAlchemy</li>
-                <li><strong>Validation:</strong> Pydantic</li>
-                <li><strong>Testing:</strong> Pytest</li>
+                <li><strong>ORM:</strong> Async SQLAlchemy 2.x</li>
+                <li><strong>Authentication:</strong> JWT + bcrypt</li>
+                <li><strong>Testing:</strong> Pytest + pytest-asyncio</li>
+                <li><strong>Load Testing:</strong> k6</li>
+                <li><strong>Infrastructure:</strong> Docker + Docker Compose</li>
+                <li><strong>Rate Limiting:</strong> SlowAPI</li>
+
+        </section>
+
+        <section>
+
+            <h2>Infrastructure & DevOps</h2>
+
+            <ul>
+                <li>Dockerized API and MySQL deployment</li>
+                <li>Environment-based configuration management</li>
+                <li>k6 load testing with authenticated workloads</li>
+                <li>JWT-secured protected routes</li>
+                <li>Async-safe database architecture</li>
+                <li>Rate limiting using SlowAPI</li>
             </ul>
+
         </section>
 
         <section>
@@ -151,17 +192,23 @@ uvicorn app.main:app --reload
         </section>
 
         <section>
+
             <h2>Why This Project?</h2>
+
             <p>
-                Designed to simulate real-world university systems with secure authentication,
-                modular backend design, and scalable architecture.
+                This project was built to explore production-style backend engineering concepts
+                including RBAC authorization, async API architecture, Dockerized deployments,
+                infrastructure bottlenecks, and scalable database-driven system design.
             </p>
+
         </section>
 
     </main>
 
     <footer>
-        <p>© 2026 University System API</p>
+        <p>
+            Backend Engineering Portfolio • Dhruv Patel • FastAPI • RBAC • Async Systems
+        </p>
     </footer>
 
     <!-- PARTICLES -->
