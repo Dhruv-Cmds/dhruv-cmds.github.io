@@ -3,7 +3,7 @@
 Personal developer portfolio showcasing backend and system-based projects.
 
 ## 🌐 Live Website
-https://dhruv-cmds.github.io
+https://dhruvcore.com
 
 ## 🧠 About
 This portfolio highlights my work in backend development and system design using Python and FastAPI.
